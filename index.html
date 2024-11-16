@@ -7,6 +7,22 @@
 </head>
 <body>
     <h1>Welcome to My Portfolio</h1>
-    <p>Scroll through the following pictures of recent projects, or click on a specific one to learn more!</p>
+    <p>Scroll through the following pictures of recent projects! Sorry it's still a work in progress... I only just made this for you guys (Neuralink!) since it was a recommended qualification! If you check back in a few weeks it'll be much nicer :)</p>
+    <img src="CGEM Telescope Materials/CGEM1.jpg" alt="Telescope" width="300" height="200">
+    <p>The UBC-NASA CGEM Telescope on a very clear night this summer.</p>
+    <img src="CGEM Telescope Materials/EncoderEthernet1.jpg" alt="Telescope" width="300" height="200">
+    <img src="CGEM Telescope Materials/EncoderEthernet2.jpg" alt="Telescope" width="150" height="200">
+    <p>I designed the system collecting pointing data (both azimuth and elevation) for the telescope. Pictured is a rig for the azimuthal encoder that is connected through RS-485 (differential signaling) SPI to an STM32 H723ZG microcontroller, on which I implemented FreeRTOS and a custom UDP Ethernet socket. The data queried from the encoder is sent via optical fibre, switch, and ethernet cable to a computer near the telescope mount. Notice that the box containing the microcontroller is shielded to prevent RF leakage (why? Lol because it's a Radio telescope) </p>
+    <img src="Burger Robot Materials/BurgerRobot1.jpg" alt="Telescope" width="250" height="300">
+    <p>Here's a picture of our burger-making robot (named "Bernadette") from after the competition (I'll add a video of it performing soon as well, once I find it). You can see that it features two encoded arms that used deconstructed vacuum cleaners to pick up food objects. There also is a lot of wiring... Mainly because of how many sensors (encoders, IR sensors, limit switches, counter recognition, line following, etc...) we had to connect -- and with Schmitt Triggers for almost all of them too! There are also three microcontrollers (STM Bluepill and two ESPs) at work here, communicating through Bluetooth and UART. </p>
+    <img src="CGEM Telescope Materials/WormGearMotor1.jpg" alt="Telescope" width="300" height="200">
+    <img src="CGEM Telescope Materials/WormGearMotor2.jpg" alt="Telescope" width="300" height="200">
+    <img src="CGEM Telescope Materials/WormGearMotor3.jpg" alt="Telescope" width="300" height="200">
+    <p>Here is a mechanical setup I designed and built to validate a 20-bit absolute Hohner Encoder! It involved a motor with a worm gear that VERY slowly turned the encoder to make sure there were no missing bits.</p>
+    <p> MORE COOL PICTURES TO COME!!!</p>
+    <p>Will put device of Parkinson's medical aid device here<p>
+    <p>Will put picture of CaTracker here (LSTM-based neuron tracking for live behaviour-neural activity correlation</p>
 </body>
 </html>
+
+
