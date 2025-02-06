@@ -67,48 +67,69 @@
         <a onclick="showContent('burgerrobot')">Burger-Cooking Robot</a>
         <a onclick="showContent('selfdriving')">Self-Driving Robot</a>
         <a onclick="showContent('essays')">Essays/Short Stories</a>
+        <a onclick="showContent('medicaldevice')">Parkinson's FOG Aid Device</a>
     </nav>
 
     <div id="home" class="content">
-        <h2>Welcome to my portfolio! Click around and look at some pictures of the projects I've built (along with limited captions)... </h2>
-        <h3>Note: Still very much a work in progress... Come back in a few weeks for a better website :)</p>
-        <p>See below: The CGEM Telescope on a clear night!</p>
-        <img src="CGEM Telescope Materials/CGEM1.jpg" alt="CGEM Telescope">
+        <h2>Welcome to my portfolio! </h2>
+        <h3>Still a work in progress... Come back in a few weeks for a better website :)</p>
+        
+        <p>The CGEM Telescope on a clear night!</p>
+        <img src="CGEM Telescope Materials/CGEM1.jpg" alt="CGEM Telescope" width="800" height ="800">
     </div>
 
     <div id="cgem" class="content">
         <h2>CGEM Telescope</h2>
+
+        <h3>System collecting pointing data for the telescope with an STM32 H723ZG microcontroller.</h3>
         <img src="CGEM Telescope Materials/EncoderEthernet1.jpg" alt="Encoder" width="450" height="300">
         <img src="CGEM Telescope Materials/EncoderEthernet2.jpg" alt="Encoder" width="225" height="300">
-        <p>System collecting pointing data for the telescope with an STM32 H723ZG microcontroller.</p>
-
+        
+        <h3>Mechanical setup to validate a 20-bit absolute Hohner Encoder.</h3>
         <img src="CGEM Telescope Materials/WormGearMotor1.jpg" alt="Motor" width="450" height="300">
         <img src="CGEM Telescope Materials/WormGearMotor2.jpg" alt="Motor" width="225" height="300">
         <img src="CGEM Telescope Materials/WormGearMotor3.jpg" alt="Motor" width="225" height="300">
-        <p>Mechanical setup to validate a 20-bit absolute Hohner Encoder.</p>
     </div>
 
     <div id="zhenlab" class="content">
         <h2>Zhen Lab (computational neuroscience research)</h2>
+
+        <h3>Overview of CaTracker software.</h3>
+        <p>CaTracker uses an LSTM neural network to track neurons in calcium-imaged videos. I developed the GUI (and drew the pink cats!)</p>
         <img src="LTRI Neuroscience Research Materials/CaTrackerOverview.jpeg" alt="CaTracker" width="600" height="400">
-        <p>CaTracker software uses an LSTM neural network to track neurons in calcium-imaged videos. I developed the GUI (and drew the pink cats!).</p>
+
+        <h3>A poster of my research project quantifying the stress-induced neuron structural changes in early-development.</h3>
+        <p>I won 'best research' awards at Molecular Genetics/Biochem/Data Science Institute research showcases!</p>
         <img src="LTRI Neuroscience Research Materials/ResearchPresentationPoster.jpg" alt="Poster" width="1000" height="1000">
-        <p>A poster of my research project quantifying the stress-induced neuron structural changes in early-development. I won 'best research' awards at Molecular Genetics/Biochem/Data Science Institute research showcases!</p>
    </div>
 
     <div id="burgerrobot" class="content">
         <h2>Buger-Cooking Robot</h2>
+
+        <h3>Meet Bernadette, our burger-making robot!</h3>
+        <p>Features encoded arms with deconstructed vacuum cleaners, numerous sensors (40+), and three microcontrollers communicating via Bluetooth and UART.</p>
         <img src="Burger Robot Materials/BurgerRobot1.jpg" alt="Robot" width="250" height="300">
         <img src="Burger Robot Materials/BurgerRobot2.jpg" alt="Robot" width="250" height="300">
-        <p>Meet Bernadette, our burger-making robot! Features encoded arms with deconstructed vacuum cleaners, numerous sensors, and three microcontrollers communicating via Bluetooth and UART.</p>
+
+        <h3>Video of our robot in action (navigation) -- giving commands by websocket.</h3>
+        <p>Coming soon oops...</p>
+
+        <h3>Video of our robot in action (picking up food) -- giving commands by websocket.</h3>
+        <p>Coming soon oops...</p>
     </div>
 
     <div id="selfdriving" class="content">
         <h2>Self-Driving Robot</h2>
+
+        <h3>Simple line following using OpenCV and 'from-scratch' computer vision.</h3>
         <img src="ENPH353 Self Driving ML Materials/SimpleLineFollow.gif" alt="Line Follow">
-        <p>Simple line-following using foundational computer vision concepts.</p>
+
+        <h3>Intermediate line-following with ROS in a Gazebo environment.</h3>
         <img src="ENPH353 Self Driving ML Materials/IntermediateLineFollow.gif" alt="Advanced Line Follow">
-        <p>Intermediate line-following with ROS in a Gazebo environment.</p>
+
+        <h3>Qt GUI employing SIFT, FLANN, and RANSAC-based object detection.</h3>
+        <img src="ENPH353 Self Driving ML Materials/objectdetection1.png" alt="Object Detection 1" width="600" height="300">
+        <img src="ENPH353 Self Driving ML Materials/objectdetection2.png" alt="Object Detection 2" width="600" height="300">
     </div>
 
     <div id="essays" class="content">
@@ -120,5 +141,33 @@
             <li><a href="Essays/ShortStory3.pdf" target="_blank">Short Story 3: The Miner's Son</a></li>
         </ul>
     </div>
+
+    <div id="medicaldevice" class="content">
+        <h2>Parkinson's FOG Aid Device</h2>
+        <ul>
+            <p> Coming soon oops </p>
+        </ul>
+    </div>
 </body>
+
+<script>
+    function showContent(sectionId) {
+        var sections = document.getElementsByClassName('content');
+        for (var i = 0; i < sections.length; i++) {
+            sections[i].style.display = 'none';
+        }
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    // Check for URL fragment (e.g., #selfdriving)
+    window.onload = function () {
+        const hash = window.location.hash.substring(1); // Remove the '#' symbol
+        if (hash) {
+            showContent(hash);
+        } else {
+            showContent('home'); // Default to 'home' if no fragment exists
+        }
+    };
+</script>
+
 </html>
