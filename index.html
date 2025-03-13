@@ -12,31 +12,132 @@
             background-color: #f4f4f4;
         }
         header {
-            background-color: #333;
+            background: url("CGEM Telescope Materials/CGEMcropped.jpg") center/cover no-repeat;
             color: white;
-            padding: 20px;
+            padding: 80px 20px;
             text-align: center;
+            position: relative;
         }
+        header h1 {
+            font-family: "Arial", sans-serif;
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin: 0;
+        }
+        .center-text {
+            text-align: center;
+            width: 100%;
+            display: block;
+        }
+        
+        .resume-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .resume-container img {
+            width: 180px; 
+            height: 200px; 
+            object-fit: cover;
+            border-radius: 15px; 
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .resume {
+            max-width: 500px;
+            text-align: left;
+        }
+        
+        .resume-wrapper {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .resume-wrapper iframe {
+            width: 34%;
+            height: 600px;
+            border: none;
+        }
+        
+        .button-container {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .button {
+            display: inline-block;
+            background: #333;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+        
+        .button:hover {
+            background: #555;
+        }
+       
         nav {
             background-color: #444;
-            overflow: hidden;
+            display: flex;
+            justify-content: center; /* Centers the nav items */
+            align-items: center;
+            gap: 20px; /* Adds spacing between items */
+            padding: 10px 0;
         }
+        
         nav a {
-            float: left;
-            display: block;
             color: white;
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
             cursor: pointer;
+            transition: 0.3s ease;
         }
+        
         nav a:hover {
             background-color: #ddd;
             color: black;
         }
+        
         .content {
             padding: 20px;
             display: none;
+        }
+        .coming-soon {
+            font-style: italic;
+            color: gray;
+        }
+        
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .card img {
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .card-grid {
+            display: block; /* Remove flexbox to prevent auto-sizing */
+        }
+        .card-grid img {
+            display: inline-block;
+            vertical-align: top;
+            margin: 5px;
         }
         #home {
             display: block;
@@ -62,126 +163,292 @@
     </header>
     <nav>
         <a onclick="showContent('home')">Home</a>
+        <a onclick="showContent('dsa2000')">DSA-2000 Telescope</a>
         <a onclick="showContent('cgem')">CGEM Telescope</a>
         <a onclick="showContent('zhenlab')">Zhen Lab</a>
-        <a onclick="showContent('burgerrobot')">Burger-Cooking Robot</a>
         <a onclick="showContent('selfdriving')">Self-Driving Robot</a>
-        <a onclick="showContent('essays')">Essays/Short Stories</a>
-        <a onclick="showContent('medicaldevice')">Parkinson's FOG Aid Device</a>
+        <a onclick="showContent('burgerrobot')">Burger-Cooking Robot</a>
+        <a onclick="showContent('essaysandart')">Writing & Art</a>
+        <!-- <a onclick="showContent('medicaldevice')">Parkinson's FOG Aid Device</a> -->
     </nav>
 
     <div id="home" class="content">
-        <h2>Welcome to my portfolio! </h2>
-        <h3>Still a work in progress... Come back in a few weeks for a better website :)</p>
+        <h2 class="center-text">Welcome to my portfolio!</h2>
+    
+        <div class="resume-container">
+            <img src="General/me.jpg" alt="Profile Picture">
+    
+            <div class="resume">
+                <h3>About Me</h3>
+                <p>I'm a third-year Engineering Physics student at UBC, in Vancouver. EngPhys combines an Honours Physics degree with Computer, Electrical, and Mechanical Engineering.</p>
+                <p>My experience includes working in Dr. Mei Zhen's lab at UofT, and Dr. Mark Halpern & Dr. Gary Hinshaw's group at UBC.</p>
+                <p>This coming summer, I will be working with Dr. Vikram Ravi's group at Caltech!</p>
+
+                <div class="button-container">
+                    <a class="button" href="mailto:svankerk@student.ubc.ca">📧 Email Me</a>
+                    <a class="button" href="https://github.com/shuyuvankerkwijk" target="_blank">🖥️ GitHub</a>
+                    <a class="button" href="https://shuyuvankerkwijk.github.io/" target="_blank">📂 Portfolio</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="resume-wrapper">
+            <iframe src="General/Resume.pdf"></iframe>
+            <div class="button-container">
+                <a class="button" href="General/Resume.pdf" target="_blank">📄 Download/View Resume</a>
+            </div>
+        </div>
+    </div>
+     
+    
+          <!-- <img src="CGEM Telescope Materials/CGEM1.jpg" alt="CGEM Telescope" width="800" height ="800">
+        <p>^ The (unfinished) CGEM Telescope on a clear night!</p> -->
+
+    <div id="dsa2000" class="content">
+        <h2>DSA-2000 Telescope Array</h2>
+
+        <div class="card">
+            <h3>Overview</h3>
+            <p>The DSA-2000 will consist of 2000 x 5m dishes covering the 0.7-2 GHz frequency range, spanning an area of 19 km x 15 km in a radio-quiet valley in Nevada. The traditional correlator digital backend is replaced with a "radio camera" that produces images in real-time. As a radio survey instrument it will be unprecedented relative to any instrument existing or planned.</p>
+            <div class="card-grid">
+                <img src="DSA Telescope Materials/DSApicture.png" alt="Telescope" width="550" height="400">
+                <img src="DSA Telescope Materials/DSAoverview.png" alt="Telescope" width="600" height="400">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Proposal</h3>
+            <p>Here is my proposal for my planned project over summer 2025.</p>
+            <div class="card-grid">
+                <a href="DSA Telescope Materials/DSAProposal.pdf" target="_blank">
+                    <img src="DSA Telescope Materials/proposalSS1.png" alt="Proposal PDF" width="250" height="300">
+                    <img src="DSA Telescope Materials/proposalSS2.png" alt="Proposal PDF" width="250" height="300">
+                </a>
+            </div>
+            <p><a href="DSA Telescope Materials/DSAProposal.pdf" target="_blank">Click here to view/download the proposal (PDF)</a></p>
+        </div>
         
-        <img src="CGEM Telescope Materials/CGEM1.jpg" alt="CGEM Telescope" width="800" height ="800">
-        <p>^ The CGEM Telescope on a clear night!</p>
     </div>
 
     <div id="cgem" class="content">
         <h2>CGEM Telescope</h2>
 
-        <h3>System collecting azimuthal pointing data for the telescope with an STM32 H723ZG microcontroller and Hohner 24-bit absolute encoder.</h3>
-        <img src="CGEM Telescope Materials/EncoderEthernet1.jpg" alt="Encoder" width="450" height="300">
-        <img src="CGEM Telescope Materials/EncoderEthernet2.jpg" alt="Encoder" width="300" height="300">
-        <img src="CGEM Telescope Materials/AzimuthalEncoderDiagram.jpg" alt="Encoder" width="450" height="300">
-        <img src="CGEM Telescope Materials/AzimuthalEncoderDiagram2.png" alt="Encoder" width="450" height="300">
-
-        <h3>System collecting inclinometer pointing data for the telescope with an STM32 H723ZG microcontroller and AD7738 24-bit sigma delta ADC.</h3>
-        <h4>Circuit diagrams and (in-progress) debugging of spurious/aliased signals being picked up by the ADC.</h3>
-        <img src="CGEM Telescope Materials/InclinometersDiagram.jpg" alt="Inclinometer" width="450" height="300">
-        <img src="CGEM Telescope Materials/InclinometersProblems.png" alt="Inclinometer" width="450" height="300">
-        <img src="CGEM Telescope Materials/InclinometersProblems2.png" alt="Inclinometer" width="450" height="300">
-
-        <h3>Mechanical setup to validate a 20-bit absolute Hohner Encoder.</h3>
-        <img src="CGEM Telescope Materials/WormGearMotor1.jpg" alt="Motor" width="450" height="300">
-        <img src="CGEM Telescope Materials/WormGearMotor2.jpg" alt="Motor" width="225" height="300">
-        <img src="CGEM Telescope Materials/WormGearMotor3.jpg" alt="Motor" width="225" height="300">
+        <div class="card">
+            <h3>Overview</h3>
+            <p>CGEM is a joint project between UBC, NASA Goddard Flight Center, and NRC DRAO. It will map polarization across the sky at 10 GHz to help search for gravitational radiation from the early Universe.</p>
+            <div class="card-grid">
+                <img src="CGEM Telescope Materials/CGEM1.jpg" alt="Telescope" width="420" height="300">
+            </div>
+        </div>
+    
+    
+        <div class="card">
+            <h3>Azimuthal Pointing System</h3>
+            <p>System collecting azimuthal pointing data for the telescope using an STM32 H723ZG microcontroller and a Hohner 24-bit absolute encoder.</p>
+            <div class="card-grid">
+                <img src="CGEM Telescope Materials/EncoderEthernet1.jpg" alt="Encoder" width="420" height="300">
+                <img src="CGEM Telescope Materials/EncoderEthernet2.jpg" alt="Encoder" width="240" height="300">
+                <!-- <img src="CGEM Telescope Materials/AzimuthalEncoderDiagram.jpg" alt="Encoder" width="450" height="300"> -->
+                <img src="CGEM Telescope Materials/AzimuthalEncoderDiagram2.png" alt="Encoder" width="450" height="300">
+            </div>
+        </div>
+    
+        <div class="card">
+            <h3>Inclinometer Pointing System</h3>
+            <p>System collecting inclinometer pointing data for the telescope using an STM32 H723ZG microcontroller and an AD7738 24-bit sigma delta ADC.</p>
+            <p>Currently debugging spurious/aliased signals being picked up by the ADC.</p>
+            <div class="card-grid">
+                <img src="CGEM Telescope Materials/InclinometersDiagram.jpg" alt="Inclinometer" width="450" height="300">
+                <img src="CGEM Telescope Materials/InclinometersProblems.png" alt="Inclinometer" width="450" height="300">
+                <img src="CGEM Telescope Materials/InclinometersProblems2.png" alt="Inclinometer" width="450" height="300">
+            </div>
+        </div>
+    
+        <div class="card">
+            <h3>Mechanical Testing</h3>
+            <p>Machined mechanical setup to validate a 20-bit absolute Hohner Encoder.</p>
+            <div class="card-grid">
+                <img src="CGEM Telescope Materials/WormGearMotor1.jpg" alt="Motor" width="400" height="300">
+                <img src="CGEM Telescope Materials/WormGearMotor2.jpg" alt="Motor" width="225" height="300">
+                <img src="CGEM Telescope Materials/WormGearMotor3.jpg" alt="Motor" width="225" height="300">
+                <img src="CGEM Telescope Materials/Radiometer1.jpg" alt="Motor" width="225" height="300">
+            </div>
+        </div>
+        <div class="card">
+            <h3>RF Noise Validation</h3>
+            <p>Using FieldFox spectrum analyzer to validate RF noise from exposed Encoder in Anechoic chamber.</p>
+            <div class="card-grid">
+                <img src="CGEM Telescope Materials/Setup.jpg" alt="Motor" width="225" height="300">
+                <img src="CGEM Telescope Materials/Antenna1.jpg" alt="Motor" width="225" height="300">
+                <img src="CGEM Telescope Materials/Antenna2.jpg" alt="Motor" width="225" height="300">
+            </div>
+        </div>
     </div>
+    
 
     <div id="zhenlab" class="content">
-        <h2>Zhen Lab (computational neuroscience research)</h2>
+        <h2>Zhen Lab (Computational Neuroscience Research)</h2>
+    
+        <div class="card">
+            <h3>CaTracker Software</h3>
+            <p>CaTracker uses an LSTM neural network to track neurons in calcium-imaged videos. I developed the GUI (and drew the pink cats!).</p>
+            <div class="card-grid">
+                <img src="LTRI Neuroscience Research Materials/CaTrackerOverview.png" alt="CaTracker" width="600" height="400">
+            </div>
+        </div>
+    
+        <div class="card">
+            <h3>Research: Stress-induced Neuron Structural Changes</h3>
+            <p>My research focused on quantifying stress-induced neuron structural changes in early development C. elegans. I won 'Best Research' awards at Molecular Genetics, Biochem, and Data Science Institute showcases.</p>
+            
+            <div class="card-grid">
+                <a href="LTRI Neuroscience Research Materials/ResearchPresentationPoster.jpg" target="_blank">
+                    <img src="LTRI Neuroscience Research Materials/ResearchPresentationPoster.jpg" alt="Poster" width="350" height="350">
+                </a>
+            </div>
+        
+            <p><a href="LTRI Neuroscience Research Materials/ResearchPresentationPoster.jpg" target="_blank">Click here</a> to view the full-resolution poster.</p>
+        </div>
 
-        <h3>Overview of CaTracker software.</h3>
-        <p>CaTracker uses an LSTM neural network to track neurons in calcium-imaged videos. I developed the GUI (and drew the pink cats!)</p>
-        <img src="LTRI Neuroscience Research Materials/CaTrackerOverview.jpeg" alt="CaTracker" width="600" height="400">
+        <div class="card">
+            <h3>Lightmicroscope Neuron Segmentation and Reconstruction</h3>
+            <p>Construction 3D models of neurons from light-microscope images.</p>
+            <div class="card-grid">
+                <!-- <img src="LTRI Neuroscience Research Materials/ResearchPresentationPoster.jpg" alt="Poster" width="1000" height="1000"> -->
+            </div>
+        </div>
+    </div>
 
-        <h3>A poster of my research project quantifying the stress-induced neuron structural changes in early-development.</h3>
-        <p>I won 'best research' awards at Molecular Genetics/Biochem/Data Science Institute research showcases!</p>
-        <img src="LTRI Neuroscience Research Materials/ResearchPresentationPoster.jpg" alt="Poster" width="1000" height="1000">
-   </div>
-
-    <div id="burgerrobot" class="content">
+   <div id="burgerrobot" class="content">
         <h2>Buger-Cooking Robot</h2>
 
-        <h3>Meet Bernadette, our burger-making robot!</h3>
-        <p>Features encoded arms with deconstructed vacuum cleaners, numerous sensors (40+), and three microcontrollers communicating via Bluetooth and UART.</p>
-        <img src="Burger Robot Materials/BurgerRobot1.jpg" alt="Robot" width="250" height="300">
-        <img src="Burger Robot Materials/BurgerRobot2.jpg" alt="Robot" width="250" height="300">
+        <p>Course link: <a href="https://projectlab.engphys.ubc.ca/enph-253-2024/" target="_blank">ENPH 253 Project Lab</a></p>
 
-        <h3>Video of our robot in action (picking up food) -- giving commands by websocket.</h3>
-        <video width="250" height="300" controls>
-            <source src="Burger Robot Materials/BurgerRobotVideo1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <div class="card">
+            <h3>Meet Bernadette, our burger-cooking robot!</h3>
+            <p>Features encoded arms with deconstructed vacuum cleaners, numerous sensors (40+), and three microcontrollers communicating via Bluetooth and UART.</p>
 
-        <h3>Video of our robot in action (navigation) -- giving commands by websocket.</h3>
-        <p>Coming soon...</p>
+            <div class="card-grid">
+                <img src="Burger Robot Materials/BurgerRobot1.jpg" alt="Robot" width="280" height="300">
+                <img src="Burger Robot Materials/BurgerRobot2.jpg" alt="Robot" width="280" height="300">
+                <video width="340" height="380" controls>
+                    <source src="Burger Robot Materials/BurgerRobotVideo1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>            
+        </div>
 
-        <h3>PCB designs in KiCad.</h3>
-        <p>Coming soon...</p>
+        <div class="card">
+            <h3>PCB Designs in KiCad</h3>
+            <p class="coming-soon">Coming soon...</p>
+        </div>
     </div>
+
 
     <div id="selfdriving" class="content">
         <h2>Self-Driving Robot</h2>
-
+    
         <p>Course link: <a href="https://projectlab.engphys.ubc.ca/enph-353/" target="_blank">ENPH 353 Project Lab</a></p>
+    
+        <div class="card">
+            <h3><a href="https://github.com/shuyuvankerkwijk/enph353_comp_code" target="_blank">COMPETITION</a></h3>
+            <p>Currently in progress!! Using "End to End Learning for Self-Driving Cars" (Bojarski, 2016) to train a self-driving robot.</p>
+            <div class="card-grid">
+                <img src="ENPH353 Self Driving ML Materials/PlayingArena.png" alt="RL" width="500" height="300">
+            </div>
+        </div>
 
-        <h3>6. Q-Learning Reinforcement-learning training to line-follow in Gazebo gym environment.</h3>
-        <p><a href="https://github.com/shuyuvankerkwijk/ENPH353_Lab7" target="_blank">Github Link</a></p>
-        <img src="ENPH353 Self Driving ML Materials/ReinforcementLearning1.gif" alt="RL" width="400" height="300">
-        <img src="ENPH353 Self Driving ML Materials/ReinforcementLearning2.gif" alt="RL" width="400" height="300">
+        <div class="card">
+            <h3><a href="https://github.com/shuyuvankerkwijk/ENPH353_Lab8" target="_blank">7. Cross-Entropy Pendulum Balancer</a></h3>
+            <p>Trained a pole to stay upright with Deep Learning in a Gazebo gym and ROS environment.</p>
+            <div class="card-grid">
+                <img src="ENPH353 Self Driving ML Materials/PendulumBalancer1.png" alt="RL" width="500" height="300">
+            </div>
+        </div>
 
-        <h3>5. Simple CNN to detect alphanumeric characters from license plates.</h3>
-        <p><a href="https://colab.research.google.com/drive/16hQz32poN7lp6xWz10SdpMR7A7Y8fGBQ?usp=sharing" target="_blank">Google Colab Link</a></p>
-        <img src="ENPH353 Self Driving ML Materials/LicensePlateExample.png" alt="License Plate" width="440" height="300">
-        <img src="ENPH353 Self Driving ML Materials/SinglePrediction.png" alt="License Plate" width="150" height="300">
-        <img src="ENPH353 Self Driving ML Materials/ModelLossFunction.png" alt="License Plate" width="310" height="300">
-        <img src="ENPH353 Self Driving ML Materials/ConfusionMatrix.png" alt="License Plate" width="250" height="300">
- 
-        <h3>4. Simple Neural Network from Scratch using Numpy.</h3>
-        <p><a href="https://colab.research.google.com/drive/1HLdtfixrXZPlyMgfXQOU2_toH-2y7Yc4?usp=sharing" target="_blank">Google Colab Link</a></p>
-        <img src="ENPH353 Self Driving ML Materials/Backpropagation.png" alt="Backpropagation" width="680" height="300">
-        <!-- <img src="ENPH353 Self Driving ML Materials/LossFunctionIterations.png" alt="Loss function" width="310" height="300"> -->
-        <img src="ENPH353 Self Driving ML Materials/LossFunctionSpaceTanh.png" alt="Tanh" width="210" height="300">
+        <div class="card">
+            <h3><a href="https://github.com/shuyuvankerkwijk/ENPH353_Lab7" target="_blank">6. Q-Learning Reinforcement Learning</a></h3>
+            <p>Trained a robot to navigate a simple course with Reinforcement Learning in a Gazebo gym and ROS environment.</p>
+            <div class="card-grid">
+                <img src="ENPH353 Self Driving ML Materials/ReinforcementLearning1.gif" alt="RL" width="500" height="300">
+                <img src="ENPH353 Self Driving ML Materials/ReinforcementLearning2.gif" alt="RL" width="500" height="300">
+            </div>
+        </div>
+    
+        <div class="card">
+            <h3><a href="https://colab.research.google.com/drive/16hQz32poN7lp6xWz10SdpMR7A7Y8fGBQ?usp=sharing" target="_blank">5. CNN for Character Recognition</a></h3>
+            <p>Trained a CNN to detect alphanumeric characters on BC license plates.</p>
+            <div class="card-grid">
+                <img src="ENPH353 Self Driving ML Materials/LicensePlateExample.png" alt="License Plate" width="500" height="300">
+                <img src="ENPH353 Self Driving ML Materials/SinglePrediction.png" alt="License Plate" width="130" height="300">
+                <img src="ENPH353 Self Driving ML Materials/ModelLossFunction.png" alt="Loss Function" width="320" height="300">
+                <img src="ENPH353 Self Driving ML Materials/ConfusionMatrix.png" alt="Confusion Matrix" width="240" height="300">
+            </div>
+        </div>
+    
+        <div class="card">
+            <h3><a href="https://colab.research.google.com/drive/1HLdtfixrXZPlyMgfXQOU2_toH-2y7Yc4?usp=sharing" target="_blank">4. Neural Network from Scratch</a></h3>
+            <p>Implemented a simple neural network from scratch using NumPy (following micrograd tutorial by Andrej Karpathy).</p>
+            <div class="card-grid">
+                <img src="ENPH353 Self Driving ML Materials/LossFunctionSpaceTanh.png" alt="Tanh" width="200" height="300">
+                <img src="ENPH353 Self Driving ML Materials/LossFunctionIterations.png" alt="Iterations" width="260" height="300">
+                <img src="ENPH353 Self Driving ML Materials/Backpropagation.png" alt="Backpropagation" width="800" height="300">
+            </div>
+        </div>
+    
+        <div class="card">
+            <h3><a href="https://github.com/shuyuvankerkwijk/ENPH353_Lab4" target="_blank">3. Object Detection with SIFT, FLANN, and RANSAC</a></h3>
+            <p>Qt GUI-based object detection system.</p>
+            <div class="card-grid">
+                <img src="ENPH353 Self Driving ML Materials/objectdetection1.png" alt="Object Detection 1" width="500" height="300">
+                <img src="ENPH353 Self Driving ML Materials/objectdetection2.png" alt="Object Detection 2" width="500" height="300">
+            </div>
+        </div>
+    
+        <div class="card">
+            <h3><a href="https://github.com/shuyuvankerkwijk/ENPH353_Lab3" target="_blank">2. In-Sim Line Following</a></h3>
+            <p>Intermediate line-following in a Gazebo and ROS environment.</p>
+            <div class="card-grid">
+                <img src="ENPH353 Self Driving ML Materials/IntermediateLineFollow.gif" alt="Line Follow" width="400" height="300">
+            </div>
+        </div>
+    
+        <div class="card">
+            <h3><a href="https://colab.research.google.com/drive/1DQV66PtIUTGMgCqnHQkZDo8ku6wntRNx?usp=sharing" target="_blank">1. Simple Line Following with OpenCV</a></h3>
+            <p>Used OpenCV to implement basic line-following.</p>
+            <div class="card-grid">
+                <img src="ENPH353 Self Driving ML Materials/SimpleLineFollow.gif" alt="Line Follow" width="400" height="300">
+            </div>
+        </div>
+    </div>     
 
-        <h3>3. Qt GUI employing SIFT, FLANN, and RANSAC-based object detection.</h3>
-        <p><a href="https://github.com/shuyuvankerkwijk/ENPH353_Lab4" target="_blank">Github Link</a></p>
-        <img src="ENPH353 Self Driving ML Materials/objectdetection1.png" alt="Object Detection 1" width="600" height="300">
-        <img src="ENPH353 Self Driving ML Materials/objectdetection2.png" alt="Object Detection 2" width="600" height="300">
+    <div id="essaysandart" class="content">
+        <h2>Essays, Short Stories, and Art</h2>
 
-        <h3>2. Intermediate line-following with ROS in a Gazebo environment.</h3>
-        <p><a href="https://github.com/shuyuvankerkwijk/ENPH353_Lab3" target="_blank">Github Link</a></p>
-        <img src="ENPH353 Self Driving ML Materials/IntermediateLineFollow.gif" alt="Advanced Line Follow">
-
-        <h3>1. Simple line following using OpenCV and 'from-scratch' computer vision.</h3>
-        <img src="ENPH353 Self Driving ML Materials/SimpleLineFollow.gif" alt="Line Follow">
+        <div class="card">
+            <h3>Essays</h3>
+            <p>Click the links below to view or download the essays:</p>
+            <ul>
+                <li><a href="Essays/Essay1.pdf" target="_blank">Essay 1: Give me Mendel</a></li>
+            </ul>
+        </div>
+    
+        <div class="card">
+            <h3>Short Stories Collection</h3>
+            <p>Click the links below to view or download the short stories:</p>
+            <ul>
+                <li><a href="Essays/ShortStory1.pdf" target="_blank">Short Story 1: The Waddenzee</a></li>
+                <li><a href="Essays/ShortStory2.pdf" target="_blank">Short Story 2: Charon</a></li>
+                <li><a href="Essays/ShortStory3.pdf" target="_blank">Short Story 3: The Miner's Son</a></li>
+            </ul>
+        </div>
     </div>
-
-    <div id="essays" class="content">
-        <h2>Essays & Short Stories</h2>
-        <p>Click the links below to view or download the essays:</p>
-        <ul>
-            <li><a href="Essays/ShortStory1.pdf" target="_blank">Short Story 1: The Waddenzee</a></li>
-            <li><a href="Essays/ShortStory2.pdf" target="_blank">Short Story 2: Charon</a></li>
-            <li><a href="Essays/ShortStory3.pdf" target="_blank">Short Story 3: The Miner's Son</a></li>
-        </ul>
-    </div>
+    
 
     <div id="medicaldevice" class="content">
         <h2>Parkinson's Freezing-of-Gait (FOG) Medical Aid Device</h2>
         <ul>
-            <p> Coming soon... </p>
+            <p class="coming-soon">Coming soon...</p>
         </ul>
     </div>
 </body>
