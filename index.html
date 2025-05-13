@@ -169,6 +169,7 @@
         <a onclick="showContent('cgem')">CGEM Telescope</a>
         <a onclick="showContent('zhenlab')">Zhen Lab</a>
         <a onclick="showContent('essaysandart')">Writing & Art</a>
+        <a onclick="showContent('hiking')">Hiking</a>
         <!-- <a onclick="showContent('medicaldevice')">Parkinson's FOG Aid Device</a> -->
     </nav>
 
@@ -182,7 +183,7 @@
                 <h3>About Me</h3>
                 <p>I'm a third-year Engineering Physics student at UBC, in Vancouver. EngPhys combines an Honours Physics degree with Computer, Electrical, and Mechanical Engineering.</p>
                 <p>My experience includes working in Dr. Mei Zhen's lab at UofT, and Dr. Mark Halpern & Dr. Gary Hinshaw's group at UBC.</p>
-                <p>This coming summer, I will be working with Dr. Vikram Ravi's group at Caltech!</p>
+                <p>This summer, I am working with Dr. Vikram Ravi's group on the DSA-2000 radio array at Caltech!</p>
 
                 <div class="button-container">
                     <a class="button" href="mailto:svankerk@student.ubc.ca">📧 Email Me</a>
@@ -217,7 +218,7 @@
 
         <div class="card">
             <h3>Proposal</h3>
-            <p>Here is my proposal for my planned project over summer 2025.</p>
+            <p>Here is my proposal for my project over summer 2025.</p>
             <div class="card-grid">
                 <a href="DSA Telescope Materials/DSAProposal.pdf" target="_blank">
                     <img src="DSA Telescope Materials/proposalSS1.png" alt="Proposal PDF" width="250" height="300">
@@ -351,10 +352,15 @@
     
         <div class="card">
             <h3><a href="https://github.com/shuyuvankerkwijk/enph353_comp_code" target="_blank">COMPETITION</a></h3>
-            <p>Currently in progress!! Using "End to End Learning for Self-Driving Cars" (Bojarski, 2016) to train a self-driving robot.</p>
+            <p>We took inspiration from the imitation learning pipeline described in "End to End Learning for Self-Driving Cars" (Bojarski, 2016) to train a self-driving robot.</p>
+            <p>Our robot successfully navigated the entire course, avoiding all obstacles, and correctly read all road-signs. We placed first in the competition. </p>
             <div class="card-grid">
                 <img src="ENPH353 Self Driving ML Materials/PlayingArena.png" alt="RL" width="500" height="300">
+                <img src="ENPH353 Self Driving ML Materials/compoverview.png" alt="RL" width="500" height="300">
+                <img src="ENPH353 Self Driving ML Materials/signpreprocessing.png" alt="RL" width="500" height="240">
+                <img src="ENPH353 Self Driving ML Materials/Roaddistribution.png" alt="RL" width="500" height="240">
             </div>
+            <p><a href="ENPH353 Self Driving ML Materials/ENPH353_FinalReport.pdf" target="_blank">Click here to view/download our final report (PDF)</a></p>
         </div>
 
         <div class="card">
@@ -426,8 +432,20 @@
         <h2>Essays, Short Stories, and Art</h2>
 
         <div class="card">
+            <h3>Explanation of Radio Astronomy Topics</h3>
+            <p>Click the links below to view or download my single-page visualized explanations of concepts in Radio Astronomy:</p>
+            <ul>
+                <li><a href="Essays/tbd.pdf" target="_blank">Topic 1: Antennas -- dipole antennas, gain, and effective area (COMING SOON)</a></li>
+                <li><a href="Essays/tbd.pdf" target="_blank">Topic 2: Radiometers -- noise, central limit theorem, and the radiometer equation (COMING SOON)</a></li>
+                <li><a href="Essays/interferometers_pt1.pdf" target="_blank">Topic 3: Interferometers (pt. 1) -- geometry, cross-correlations, and point-spread functions</a></li>
+                <li><a href="Essays/tbd.pdf" target="_blank">Topic 4: Interferometers (pt. 2) -- FX correlators, gridding, and deconvolution (COMING SOON)</a></li>
+
+            </ul>
+        </div>
+
+        <div class="card">
             <h3>Essays</h3>
-            <p>Click the links below to view or download the essays:</p>
+            <p>Click the links below to view or download my essays:</p>
             <ul>
                 <li><a href="Essays/Essay1.pdf" target="_blank">Essay 1: Give me Mendel</a></li>
             </ul>
@@ -435,7 +453,7 @@
     
         <div class="card">
             <h3>Short Stories Collection</h3>
-            <p>Click the links below to view or download the short stories:</p>
+            <p>Click the links below to view or download my short stories:</p>
             <ul>
                 <li><a href="Essays/ShortStory1.pdf" target="_blank">Short Story 1: The Waddenzee</a></li>
                 <li><a href="Essays/ShortStory2.pdf" target="_blank">Short Story 2: Charon</a></li>
@@ -452,6 +470,27 @@
         </ul>
     </div>
 </body>
+
+<div id="hiking" class="content">
+    <h2>Hiking pictures!</h2>
+
+    <div class="card">
+        <h3>Hawaii</h3>
+        <div class="card-grid">
+            <img src="hiking/hawaii1.JPG" alt="Line Follow" width="300" height="200">
+            <img src="hiking/hawaii2.gif" alt="Line Follow" width="350" height="200">
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>British Columbia</h3>
+        <div class="card-grid">
+            <img src="hiking/bc1.JPG" alt="Line Follow" width="200" height="300">
+            <img src="hiking/bc2.JPG" alt="Line Follow" width="200" height="300">
+            <img src="hiking/bc3.JPG" alt="Line Follow" width="200" height="300">
+        </div>
+    </div>
+</div>
 
 <script>
     function showContent(sectionId) {
