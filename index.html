@@ -245,6 +245,7 @@
         <div class="card">
             <h3>Azimuthal Pointing System</h3>
             <p>System collecting azimuthal pointing data for the telescope using an STM32 H723ZG microcontroller and a Hohner 24-bit absolute encoder.</p>
+            <p>Configured MPU and registers for UDP socket on microcontroller using lwIP and FreeRTOS. Ethernet signal is converted to fibre optic signal. Metal box prevents RFI emission</p>
             <div class="card-grid">
                 <img src="CGEM Telescope Materials/EncoderEthernet1.jpg" alt="Encoder" width="420" height="300">
                 <img src="CGEM Telescope Materials/EncoderEthernet2.jpg" alt="Encoder" width="240" height="300">
@@ -255,8 +256,8 @@
     
         <div class="card">
             <h3>Inclinometer Pointing System</h3>
-            <p>System collecting inclinometer pointing data for the telescope using an STM32 H723ZG microcontroller and an AD7738 24-bit sigma delta ADC.</p>
-            <p>Currently debugging spurious/aliased signals being picked up by the ADC.</p>
+            <p>System collecting inclinometer pointing data for the telescope using an STM32 H723ZG microcontroller and an AD7738 24-bit sigma delta ADC (actual picture/circuit diagram to be added).</p>
+            <p>The plotted figures show some spurious/aliased signals that were being picked up by the ADC -- interestingly, one of them (16hz) was due to the fibre-media converter we were using injecting noise into the system!</p>
             <div class="card-grid">
                 <img src="CGEM Telescope Materials/InclinometersDiagram.jpg" alt="Inclinometer" width="450" height="300">
                 <img src="CGEM Telescope Materials/InclinometersProblems.png" alt="Inclinometer" width="450" height="300">
@@ -330,11 +331,29 @@
 
             <div class="card-grid">
                 <img src="Burger Robot Materials/BurgerRobot1.jpg" alt="Robot" width="280" height="300">
-                <img src="Burger Robot Materials/BurgerRobot2.jpg" alt="Robot" width="280" height="300">
+                <img src="Burger Robot Materials/BurgerRobot3.jpg" alt="Robot" width="280" height="300">
                 <video width="340" height="380" controls>
                     <source src="Burger Robot Materials/BurgerRobotVideo1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <video width="350" height="340" controls>
+                    <source src="Burger Robot Materials/BurgerRobotVideo2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>            
+            <p>Our robot was saved as an example for future students in the course! Of course, whether this was only as a warning to not repeat our mistake in building an overly complex and massive robot is up in the air...</p>
+        </div>
+
+        <div class="card">
+            <h3>Some close ups:</h3>
+            <p>Sensors for line following, encoded azimuthal rotation using a worm gear, a belt-driven linear slide for delivering the burgers, and lots of wiring!</p>
+
+            <div class="card-grid">
+                <img src="Burger Robot Materials/BurgerRobot4.jpg" alt="Robot" width="300" height="280">
+                <img src="Burger Robot Materials/BurgerRobot5.jpg" alt="Robot" width="300" height="280">
+                <img src="Burger Robot Materials/BurgerRobot6.jpg" alt="Robot" width="200" height="300">
+                <!-- <img src="Burger Robot Materials/BurgerRobot2.jpg" alt="Robot" width="280" height="300"> -->
+                <img src="Burger Robot Materials/BurgerRobot7.jpg" alt="Robot" width="200" height="300">
             </div>            
         </div>
 
